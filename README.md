@@ -28,7 +28,7 @@
 	add
 	Enter the movie title
 	ultron
-	ultron title already present and  rating is 3
+	ultron title already present and  rating is Average.
 
 	**Case 2**
  	Welcome to movie rating system! Please choose option add, update, display, exit
@@ -46,14 +46,14 @@
 	ultron
 	Enter rating
 	4
-	ultron movie title rating updated!
+	ultron movie title rating updated.
 
    	**Case 4**
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	display
 	Enter the movie title
 	ultron
-	ultron rating is 4
+	ultron rating is Good.
 
 	**Case 5**
 	Welcome to movie rating system! Please choose option add, update, display, exit
@@ -70,12 +70,12 @@
 	display
 	Enter the movie title
 	endgame
-	endgame movie title rating is 4
+	endgame movie title rating is Good.
 
 	**Case 7**
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	like
-	Option you have chosen is not supported!
+	Option you have chosen is not supported.
 
 	**Case 8**
 	Welcome to movie rating system! Please choose option add, update, display, exit
