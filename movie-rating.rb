@@ -7,13 +7,13 @@ movies={
 
 def calculate_rating(rating)
   msg=""
-  if rating >= 5 then
+  if rating.to_i >= 5 then
     msg="Excellent"
-  elsif rating < 5 then
+  elsif rating.to_i < 5 and rating.to_i > 3  then
     msg="Good"
-  elsif rating == 3 then
+  elsif rating.to_i == 3 then
     msg="Average"
-  elsif rating > 3 then
+  elsif rating.to_i > 3 then
     msg="Bad"
   else
     msg="Bad"     
@@ -41,7 +41,7 @@ while $finish do
 
         if movies[title]
            message=calculate_rating(movies[title])
-           puts "#{title} movie title already present and rating is #{message}"
+           puts "#{title} movie title already present and rating is #{message}."
            puts
            puts
         else
@@ -50,7 +50,7 @@ while $finish do
           
           if is_rating_valid?(rating)
             movies[title] = rating
-            puts "#{title} movie title rating added!"
+            puts "#{title} movie title rating added."
             puts
             puts
           else
@@ -71,7 +71,7 @@ while $finish do
           
           if is_rating_valid?(rating)
             movies[title] = rating
-            puts "#{title} movie title rating updated!"
+            puts "#{title} movie title rating updated."
             puts
             puts
           else
@@ -107,8 +107,9 @@ while $finish do
         puts
         exit(0);
       else 
-        puts "Option you have chosen is not supported!"
+        puts "Option you have chosen is not supported."
         puts
         puts
   end 
 end           
+
