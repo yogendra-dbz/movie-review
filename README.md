@@ -18,19 +18,28 @@
 
 
 ## Run movie rating app
-* docker run -it movie-rating
+* sudo docker run -it movie-rating
 
 
 ### Output
 
-
+        **Case 1** 
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	add
 	Enter the movie title
 	ultron
 	ultron title already present and  rating is 3
 
-
+        **Case 2**
+        Welcome to movie rating system! Please choose option add, update, display, exit
+	update
+	Enter the movie title
+	ultron
+	Enter rating
+	zyx
+	Rating is not valid! Please enter numeric value for rating.
+        
+	**Case 3**
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	update
 	Enter the movie title
@@ -39,14 +48,14 @@
 	4
 	ultron movie title rating updated!
 
-
+   	**Case 4**
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	display
 	Enter the movie title
 	ultron
 	ultron rating is 4
 
-
+	**Case 5**
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	add
 	Enter the movie title
@@ -56,18 +65,19 @@
 	endgame movie title rating added
 
 
+	**Case 6**
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	display
 	Enter the movie title
 	endgame
 	endgame movie title rating is 4
 
-
+	**Case 7**
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	like
 	Option you have chosen is not supported!
 
-
+	**Case 8**
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	exit
 	Thank you for visit. Hope you like the movie rating system.
