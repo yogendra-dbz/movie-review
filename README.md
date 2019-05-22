@@ -23,15 +23,15 @@
 
 ### Output
 
-        **Case 1** 
+	**Case 1** 
 	Welcome to movie rating system! Please choose option add, update, display, exit
 	add
 	Enter the movie title
 	ultron
 	ultron title already present and  rating is 3
 
-        **Case 2**
-        Welcome to movie rating system! Please choose option add, update, display, exit
+	**Case 2**
+ 	Welcome to movie rating system! Please choose option add, update, display, exit
 	update
 	Enter the movie title
 	ultron
