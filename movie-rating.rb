@@ -5,6 +5,30 @@ movies={
     'ultron' => '3'
 }
 
+def calculate_rating(rating)
+  msg=""
+  if rating >= 5 then
+    msg="Excellent"
+  elsif rating < 5 then
+    msg="Good"
+  elsif rating == 3 then
+    msg="Average"
+  elsif rating > 3 then
+    msg="Bad"
+  else
+    msg="Bad"     
+  end
+  return msg
+end
+
+def is_rating_valid?(rating)
+  if rating =~ /^-?[0-9]+$/
+    return true
+  else 
+    return false  
+  end
+end      
+
 $finish=1;
 while $finish do
   puts "Welcome to movie rating system! Please choose option add, update, display, exit"
@@ -16,17 +40,24 @@ while $finish do
         title= gets.chomp
 
         if movies[title]
-           puts "#{title} movie title already present and  rating is #{movies[title]}"
+           message=calculate_rating(movies[title])
+           puts "#{title} movie title already present and rating is #{message}"
            puts
            puts
         else
           puts "Enter rating"
           rating= gets.chomp
           
-          movies[title] = rating
-          puts "#{title} movie title rating added!"
-          puts
-          puts
+          if is_rating_valid?(rating)
+            movies[title] = rating
+            puts "#{title} movie title rating added!"
+            puts
+            puts
+          else
+            puts "Rating is not valid! Please enter numeric value for rating."
+            puts
+            puts  
+          end  
         end 
     
       when "update"
@@ -38,10 +69,16 @@ while $finish do
           puts "Enter rating"
           rating= gets.chomp
           
-          movies[title] = rating
-          puts "#{title} movie title rating updated!"
-          puts
-          puts
+          if is_rating_valid?(rating)
+            movies[title] = rating
+            puts "#{title} movie title rating updated!"
+            puts
+            puts
+          else
+            puts "Rating is not valid! Please enter numeric value for rating." 
+            puts
+            puts 
+          end   
         else
           puts "No rating has been added yet!  Please add the #{title} rating first."
           puts
@@ -54,7 +91,8 @@ while $finish do
         title= gets.chomp
         
         if movies[title]
-          puts "#{title} rating is #{movies[title]}."
+          message=calculate_rating(movies[title])
+          puts "#{title} movie rating is #{message}."
           puts
           puts
         else
@@ -74,4 +112,3 @@ while $finish do
         puts
   end 
 end           
-
